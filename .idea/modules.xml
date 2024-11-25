@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/.vscode.iml" filepath="$PROJECT_DIR$/.idea/.vscode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/english_vocabulary.iml" filepath="$PROJECT_DIR$/.idea/english_vocabulary.iml" />
     </modules>
   </component>
 </project>
