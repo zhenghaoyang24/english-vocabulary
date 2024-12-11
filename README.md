@@ -51,5 +51,5 @@
 ![image](https://github.com/user-attachments/assets/e7ef83c9-37a8-4998-ba2a-3e9ae52a68e3)
 
 ### 数据来源
-数据来源与个人整理与开源数据，如有侵权请联系。
+数据来源与个人整理与开源数据，如有侵权请通过**主页邮箱**联系。
 
