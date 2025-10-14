@@ -12,6 +12,8 @@
 `tb_voc_book`：词书关联表；  
 `tb_voc_examples`：单词例句表；  
 
+你可以直接 fork 或 下载项目使用单词数据，也可以 [点击这里](https://preview-voc.netlify.app/) 快速查看单词。
+
 ### 词库与例句表展示
 1. json版示例
    ```js
