@@ -6,14 +6,17 @@
 **单词书**：四级词汇乱序版、考研词汇、星火四级词汇必背乱序版、雅思词汇念念不忘乱序版、
 托福高频词汇、考研英语(二)词汇 乱序版。（如需要其他词书 、请提交**issue**）
 
-### 文件列表说明
+### 文件说明与预览
 `index.html`: 预览文件（忽略）。  
 `tb_vocabulary`：词汇表；  
 `tb_book`：单词书表；  
 `tb_voc_book`：词书关联表；  
 `tb_voc_examples`：单词例句表；  
 
-你可以直接 fork 或 下载项目使用单词数据，也可以 [点击这里](https://preview-voc.netlify.app/) 快速查看单词。
+你可以直接 fork 或 下载项目使用单词数据，也可以先 [点击这里](https://preview-voc.netlify.app/) 快速查看单词。
+
+<img width="1215" height="547" alt="image" src="https://github.com/user-attachments/assets/37a93087-20ea-4784-b42a-c14c46e5bc1d" />
+
 
 ### 词库与例句表展示
 1. json版示例
