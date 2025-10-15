@@ -20,6 +20,7 @@
 
 ### 词库与例句表展示
 1. json版示例
+   单词：
    ```js
    /*tb_vocabulary.json*/
    [
@@ -40,6 +41,9 @@
      "frequency": 0.230471764218478
     }
    ]
+   ```
+   例句：
+   ```js
    /*tb_voc_examples.json*/
    [
     {
