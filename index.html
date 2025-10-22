@@ -282,11 +282,37 @@
       background: #444;
       border-radius: 3px;
     }
+
+    /* 遮罩层 */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--bg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loading-text {
+      font-size: 20px;
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
+
+    <!-- 加载遮罩层 -->
+    <div id="loadingOverlay" class="loading-overlay">
+      <div class="loading-text">数据正在加载...</div>
+    </div>
+
     <header>
       <h1>词汇预览</h1>
     </header>
@@ -380,7 +406,12 @@
         });
 
         renderBooks();
+
+        // 隐藏加载遮罩
+        document.getElementById('loadingOverlay').style.display = 'none';
       } catch (err) {
+        // 隐藏加载遮罩
+        document.getElementById('loadingOverlay').style.display = 'none';
         document.getElementById('bookSelect').innerHTML =
           `<div class="error">❌ 初始化失败: ${err.message}</div>`;
         console.error(err);
