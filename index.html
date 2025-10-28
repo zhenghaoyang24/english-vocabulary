@@ -367,52 +367,59 @@
     };
 
     // ===== 初始化加载所有数据 =====
+
+    // ===== 初始化加载所有数据 =====
     async function init() {
+      const totalSteps = 4;
+      let completedSteps = 0;
+
+      const updateProgress = () => {
+        completedSteps++;
+        const percent = Math.round((completedSteps / totalSteps) * 100);
+        document.querySelector('.loading-text').textContent = `数据正在加载... ${percent}%`;
+      };
+
       try {
-        // 并行加载
-        const [
-          wordsData,
-          examplesData,
-          booksData,
-          vocBookData
-        ] = await Promise.all([
-          fetchData('tb_vocabulary.json'),
-          fetchData('tb_voc_examples.json'),
-          fetchData('tb_book.json'),
-          fetchData('tb_voc_book.json')
-        ]);
-
-        // 构建 wordsMap 和 spellingToWord
-        wordsData.forEach(word => {
-          wordsMap.set(word.wordid, word);
-          spellingToWord.set(word.spelling.toLowerCase(), word);
+        // 依次加载（或并行但手动追踪）
+        const wordsPromise = fetchData('tb_vocabulary.json').then(data => {
+          data.forEach(word => {
+            wordsMap.set(word.wordid, word);
+            spellingToWord.set(word.spelling.toLowerCase(), word);
+          });
+          updateProgress();
+          return data;
         });
 
-        // 构建 examplesMap
-        examplesData.forEach(ex => {
-          if (!examplesMap.has(ex.wordid)) {
-            examplesMap.set(ex.wordid, []);
-          }
-          examplesMap.get(ex.wordid).push(ex);
+        const examplesPromise = fetchData('tb_voc_examples.json').then(data => {
+          data.forEach(ex => {
+            if (!examplesMap.has(ex.wordid)) examplesMap.set(ex.wordid, []);
+            examplesMap.get(ex.wordid).push(ex);
+          });
+          updateProgress();
+          return data;
         });
 
-        // 保存 books
-        books = booksData;
-
-        // 构建 vocBookMap: bookid → Set(wordid)
-        vocBookData.forEach(link => {
-          if (!vocBookMap.has(link.bookid)) {
-            vocBookMap.set(link.bookid, new Set());
-          }
-          vocBookMap.get(link.bookid).add(link.wordid);
+        const booksPromise = fetchData('tb_book.json').then(data => {
+          books = data;
+          updateProgress();
+          return data;
         });
+
+        const vocBookPromise = fetchData('tb_voc_book.json').then(data => {
+          data.forEach(link => {
+            if (!vocBookMap.has(link.bookid)) vocBookMap.set(link.bookid, new Set());
+            vocBookMap.get(link.bookid).add(link.wordid);
+          });
+          updateProgress();
+          return data;
+        });
+
+        // 等待全部完成
+        await Promise.all([wordsPromise, examplesPromise, booksPromise, vocBookPromise]);
 
         renderBooks();
-
-        // 隐藏加载遮罩
         document.getElementById('loadingOverlay').style.display = 'none';
       } catch (err) {
-        // 隐藏加载遮罩
         document.getElementById('loadingOverlay').style.display = 'none';
         document.getElementById('bookSelect').innerHTML =
           `<div class="error">❌ 初始化失败: ${err.message}</div>`;
