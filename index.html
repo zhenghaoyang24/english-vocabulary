@@ -367,8 +367,6 @@
     };
 
     // ===== 初始化加载所有数据 =====
-
-    // ===== 初始化加载所有数据 =====
     async function init() {
       const totalSteps = 4;
       let completedSteps = 0;
@@ -418,7 +416,11 @@
         await Promise.all([wordsPromise, examplesPromise, booksPromise, vocBookPromise]);
 
         renderBooks();
-        document.getElementById('loadingOverlay').style.display = 'none';
+
+        setTimeout(() => {
+          document.getElementById('loadingOverlay').style.display = 'none';
+        }, 500);
+
       } catch (err) {
         document.getElementById('loadingOverlay').style.display = 'none';
         document.getElementById('bookSelect').innerHTML =
