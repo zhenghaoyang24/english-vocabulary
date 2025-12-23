@@ -6,6 +6,8 @@
 **单词书**：四级词汇乱序版、考研词汇、星火四级词汇必背乱序版、雅思词汇念念不忘乱序版、
 托福高频词汇、考研英语(二)词汇 乱序版。（如需要其他词书 、请提交**issue**）
 
+相关项目：[inputword 单词小程序](https://github.com/zhenghaoyang24/inputword)
+
 ### 文件说明与预览
 `index.html`: 单词预览文件（可忽略）。  
 `tb_vocabulary`：词汇表；  
