@@ -15,10 +15,8 @@
 `tb_voc_examples`：单词例句表；  
 
 你可以直接 fork 或 下载项目使用单词数据，也可以先 [点击这里](https://voch.netlify.app/) 快速查看单词与例句数据。
+
 预览项目地址：[https://github.com/zhenghaoyang24/voch](https://github.com/zhenghaoyang24/voch)
-
-<img width="1215" height="547" alt="image" src="https://github.com/user-attachments/assets/37a93087-20ea-4784-b42a-c14c46e5bc1d" />
-
 
 ### 词库与例句表展示
 1. json版示例
