@@ -6,7 +6,7 @@
 **单词书**：四级词汇乱序版、考研词汇、星火四级词汇必背乱序版、雅思词汇念念不忘乱序版、
 托福高频词汇、考研英语(二)词汇 乱序版。（如需要其他词书 、请提交**issue**）
 
-相关项目：[记单词小程序](https://github.com/zhenghaoyang24/inputword)
+相关项目：[记单词小程序](https://github.com/zhenghaoyang24/inputword)  
 预览项目地址：[https://github.com/zhenghaoyang24/voch](https://github.com/zhenghaoyang24/voch)
 
 ### 文件说明与预览
@@ -15,7 +15,7 @@
 `tb_voc_book`：词书关联表；  
 `tb_voc_examples`：单词例句表；  
 
-你可以直接 fork 或 下载项目使用单词数据，也可以先 [点击这里](https://voch.netlify.app/) 快速查看单词与例句数据。
+你可以直接 fork 该项目，也可以先 [点击这里](https://voch.netlify.app/) 快速查看单词与例句数据。
 
 ### 词库与例句表展示
 1. json版示例
