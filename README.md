@@ -1,15 +1,20 @@
 ## English Vocabulary
 
-### 包含内容（sql,json）
 10万+**单词**：双音音标、中文释义、单词频率。  
 14万+条**单词例句**：中英文释义，例句热度。  
 **单词书**：四级词汇乱序版、考研词汇、星火四级词汇必背乱序版、雅思词汇念念不忘乱序版、
 托福高频词汇、考研英语(二)词汇 乱序版。（如需要其他词书 、请提交**issue**）
 
-相关项目：[记单词小程序](https://github.com/zhenghaoyang24/inputword)  
-预览项目地址：[https://github.com/zhenghaoyang24/voch](https://github.com/zhenghaoyang24/voch)
+## 预览
 
-### 文件说明与预览
+数据预览地址：[https://voch.netlify.app/](https://voch.netlify.app/)
+
+## 相关项目
+
+- [记单词小程序](https://github.com/zhenghaoyang24/inputword)  
+- [单词记忆web应用](https://github.com/zhenghaoyang24/vocabverse)
+
+## 文件说明
 `tb_vocabulary`：词汇表；  
 `tb_book`：单词书表；  
 `tb_voc_book`：词书关联表；  
@@ -17,7 +22,7 @@
 
 你可以直接 fork 该项目，也可以先 [点击这里](https://voch.netlify.app/) 快速查看单词与例句数据。
 
-### 词库与例句表展示
+## 词库与例句表展示
 1. json版示例
    单词：
    ```js
@@ -59,6 +64,6 @@
 ![image](https://github.com/user-attachments/assets/563ec389-5370-4970-b5d3-3806443c962f)
 ![image](https://github.com/user-attachments/assets/e7ef83c9-37a8-4998-ba2a-3e9ae52a68e3)
 
-### 数据来源
+## 数据来源
 数据来源与个人整理与开源数据，如有侵权请通过**主页邮箱**联系。
 
